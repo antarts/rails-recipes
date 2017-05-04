@@ -7,4 +7,5 @@
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js
 //= require ckeditor/init
+//= require jquery-ui
 
