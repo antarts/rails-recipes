@@ -1,7 +1,7 @@
 class Admin::EventsController < AdminController
 
   def index
-    @events = Event.all
+    @events = Event.rank(:row_order).all
   end
 
   def show
@@ -49,7 +49,7 @@ class Admin::EventsController < AdminController
     total = 0
     Array(params[:ids]).each do |event_id|
       event = Event.find(event_id)
-      
+
       if params[:commit] == I18n.t(:bulk_update)
         event.status = params[:event_status]
         if event.save
@@ -62,6 +62,14 @@ class Admin::EventsController < AdminController
     end
 
     flash[:alert] = "成功完成 #{total} 笔"
+    redirect_to admin_events_path
+  end
+
+  def reorder
+    @event = Event.find_by_friendly_id!(params[:id])
+    @event.row_order_position = params[:position]
+    @event.save!
+
     redirect_to admin_events_path
   end
 
