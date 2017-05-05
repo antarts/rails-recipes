@@ -1,3 +1,13 @@
+<% if alert %>
+    <p class="alert alert-danger">
+    <% if @registration.errors[:base].any? %>
+    	<% @registration.errors[:base].each do |error| %>
+    	<%= error %>
+    	<% end %>
+    <% end %>
+    </p>
+<% end %>
+
 <h1><%= @event.name %></h1>
 <h2>Step 1</h2>
 
