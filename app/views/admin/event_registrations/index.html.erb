@@ -76,3 +76,7 @@
 </table>
 
 <%= paginate @registrations %>
+
+<p class="pull-right">
+	<%= link_to "导出 CSV", admin_event_registrations_path(:format => :csv), :class => "btn btn-default" %>
+</p>
