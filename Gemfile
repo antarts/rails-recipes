@@ -5,40 +5,24 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
-
 gem 'bootstrap-sass'
-
 gem 'devise'
-
 gem 'rails-i18n'
-
 gem 'devise-i18n'
-
 gem 'select2-rails'
-
 gem 'nested_form_fields'
-
 gem 'bootstrap-datepicker-rails'
-
 gem 'ckeditor'
-
 gem 'ranked-model'
-
 gem 'jquery-ui-rails'
-
 gem 'kaminari'
-
 gem 'ransack'
-
 gem 'paper_trail'
-
 gem 'rubyzip'
 gem 'axlsx'
 gem 'axlsx_rails'
-
 gem 'carrierwave'
 gem 'mini_magick'
 

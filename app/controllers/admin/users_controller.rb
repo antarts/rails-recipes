@@ -1,5 +1,4 @@
 class Admin::UsersController < ApplicationController
-  before_action :require_editor!
   before_action :require_admin!
 
   def index
@@ -23,7 +22,7 @@ class Admin::UsersController < ApplicationController
   protected
 
   def user_params
-    params.require(:user).permit(:email, :group_ids => [])
+    params.require(:user).permit(:email, :role, :group_ids => [])
   end
 
 end
