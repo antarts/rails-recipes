@@ -27,6 +27,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry'
 gem 'awesome_rails_console'
+gem 'rails-erd'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
