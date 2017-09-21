@@ -17,6 +17,7 @@ set :deploy_to, "/home/deploy/rails-recipes"  # 这样服务器上代码的目�
 # set :format, :airbrussh
 
 set :rbenv_map_bins, %w{rake gem bundle ruby rails sidekiq sidekiqctl}
+after 'deploy:failed', 'sidekiq:restart'
 
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
