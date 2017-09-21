@@ -18,7 +18,7 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/rails'
 require 'capistrano/passenger'
 require 'capistrano/sidekiq'
-require 'capistrano/bundler'
+require 'capistrano/sidekiq/monit'
 
 # Include tasks from other gems included in your Gemfile
 #
