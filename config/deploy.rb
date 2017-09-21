@@ -16,6 +16,8 @@ set :deploy_to, "/home/deploy/rails-recipes"  # 这样服务器上代码的目�
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
+after 'deploy:failed', 'sidekiq:restart'
+
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
