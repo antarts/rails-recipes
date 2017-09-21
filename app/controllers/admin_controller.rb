@@ -9,7 +9,7 @@ class AdminController < ApplicationController
 
   def require_editor!
   	unless current_user.is_editor?
-  		flash[:alert] = "您地权限不足"
+  		flash[:alert] = "您的权限不足"
   		redirect_to root_path
   	end
   end
