@@ -1,4 +1,9 @@
 "zh-CN":
+  event:
+    status:
+      draft: 草稿
+      public: 公开
+      private: 私密
   activerecord:
     attributes:
       event:
